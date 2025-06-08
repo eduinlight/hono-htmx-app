@@ -16,5 +16,9 @@
     "template",
     "bun",
     "typescript"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eduinlight/hono-htmx-app.git"
+  }
 }
