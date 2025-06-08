@@ -10,7 +10,7 @@ services:
   front:
     <<: *service
     container_name: front
-    command: sh -c "bun run start-dev & bun run live-reload & wait"
+    command: sh -c "bun run start-dev & bun run live-reload & bun run bundle-dev & wait"
     env_file:
       - .env
     ports:

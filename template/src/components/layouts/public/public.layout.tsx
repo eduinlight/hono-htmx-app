@@ -34,10 +34,9 @@ export const PublicLayout: FC<PropsWithChildren<PublicLayoutProps>> = ({
       <body>
         <noscript>"You need to enable JavaScript to run this app."</noscript>
         <div id="root">${children}</div>
-        <script src="/js/alpine-live-reload-persist.js"></script>
         ${IS_DEV &&
     html`
-          <script type="module" src="/js/live-reload-client.js"></script>
+          <script type="module" src="/js/bundle.js"></script>
         `
     }
       </body>
