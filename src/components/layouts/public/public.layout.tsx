@@ -26,17 +26,17 @@ export const PublicLayout: FC<PropsWithChildren<PublicLayoutProps>> = ({
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Exposelocal - ${title}</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
       </head>
       <body>
         <noscript>"You need to enable JavaScript to run this app."</noscript>
         <div id="root">${children}</div>
-        <script src="/htmx.min.js"></script>
-        <script src="/alpinejs.min.js"></script>
+        <script src="/js/htmx.min.js"></script>
+        <script src="/js/alpinejs.min.js"></script>
         ${IS_DEV &&
         html`
-          <script type="module" src="/socket.io.min.js"></script>
-          <script type="module" src="/live-reload.js"></script>
+          <script type="module" src="/js/socket.io.min.js"></script>
+          <script type="module" src="/js/live-reload-client.js"></script>
         `}
       </body>
     </html>`;

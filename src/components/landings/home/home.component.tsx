@@ -8,6 +8,7 @@ export const Home: FC = () => {
       <div className="navbar bg-gray-300 shadow-md">
         <div class="flex-1">
           <a class="btn btn-ghost text-xl">yes</a>
+          here what is this
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">

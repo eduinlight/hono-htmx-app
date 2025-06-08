@@ -1,0 +1,16 @@
+services:
+  front:
+    image: oven/bun:1.2.15-alpine
+    container_name: front
+    command: sh -c "bun run dev & bun run ./dev/live-reload.ts & wait"
+    user: "${UID}:${GID}"
+    env_file:
+      - .env
+    working_dir: /home/bun/app
+    volumes:
+      - .:/home/bun/app
+      - ~/.bun:/home/bun/.bun
+    ports:
+      - ${PORT}:${PORT}
+      - ${LIVE_RELOAD_PORT}:${LIVE_RELOAD_PORT}
+

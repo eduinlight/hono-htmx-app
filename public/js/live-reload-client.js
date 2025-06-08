@@ -28,7 +28,6 @@ async function fetchWithRetry(url, retry = 3, delay = 100){
       target: "#root",
       swap: "innerHTML"
     })
-
   })
 
   socket.on('reload style', async (style) => {

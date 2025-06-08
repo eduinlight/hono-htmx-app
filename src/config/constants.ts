@@ -1,4 +1,4 @@
-export const { FRONT_PORT, ENV } = process.env;
+export const { PORT, ENV, LIVE_RELOAD_PORT } = process.env;
 
 export const IS_DEV = ENV === "development";
 

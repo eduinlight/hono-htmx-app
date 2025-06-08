@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
 import pagesRouter from "./pages";
-import { FRONT_PORT, IS_DEV } from "./config";
+import { PORT, IS_DEV, LIVE_RELOAD_PORT } from "./config";
 import { logger } from "hono/logger";
 import { htmxMiddleware } from "./middlewares";
 import { io } from "socket.io-client";
@@ -17,12 +17,12 @@ app.use(htmxMiddleware());
 app.route("/", pagesRouter);
 
 Bun.serve({
-  port: FRONT_PORT,
+  port: PORT,
   fetch: app.fetch,
 });
 
 if (IS_DEV) {
-  const client = io("ws://exposelocal-live-reload:4000");
-
-  client.emit("server reloaded");
+  const client = io(`ws://localhost:${LIVE_RELOAD_PORT}`);
+  client.emit("reload-page");
+  console.log("reload-page emitted")
 }

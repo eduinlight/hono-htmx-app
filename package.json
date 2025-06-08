@@ -3,14 +3,20 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "dev": "bun run --bun --watch src/index.ts"
+    "dev": "bun run start-dev",
+    "start-dev": "bun run --bun --watch src/app.ts",
+    "tw-watch": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
+    "live-reload": "bun run --bun --watch ./dev/live-reload.ts"
   },
   "dependencies": {
-    "hono": "^4.5.9"
+    "hono": "^4.7.11",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/bun": "latest",
-    "daisyui": "^4.12.10",
-    "socket.io-client": "^4.7.5"
+    "daisyui": "^4.12.24",
+    "socket.io-client": "^4.8.1",
+    "tailwindcss": "^4.1.8"
   }
 }
