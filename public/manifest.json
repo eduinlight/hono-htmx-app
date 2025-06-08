@@ -1,15 +1,15 @@
 {
-  "short_name": "Exposelocal",
-  "name": "ExposeLocal",
-  "icons": [
-    {
-      "sizes": "50x50",
-      "src": "/favicon.png",
-      "type": "image/png"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"short_name": "Exposelocal",
+	"name": "ExposeLocal",
+	"icons": [
+		{
+			"sizes": "50x50",
+			"src": "/favicon.png",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
 }

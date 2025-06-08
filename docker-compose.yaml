@@ -1,16 +1,18 @@
+x-service: &service  
+  image: oven/bun:1.2.15-alpine
+  user: "${UID}:${GID}"
+  working_dir: /home/bun/app
+  volumes:
+    - .:/home/bun/app
+    - ~/.bun:/home/bun/.bun
+
 services:
   front:
-    image: oven/bun:1.2.15-alpine
+    <<: *service
     container_name: front
-    command: sh -c "bun run dev & bun run ./dev/live-reload.ts & wait"
-    user: "${UID}:${GID}"
+    command: sh -c "bun run start-dev & bun run live-reload & wait"
     env_file:
       - .env
-    working_dir: /home/bun/app
-    volumes:
-      - .:/home/bun/app
-      - ~/.bun:/home/bun/.bun
     ports:
       - ${PORT}:${PORT}
       - ${LIVE_RELOAD_PORT}:${LIVE_RELOAD_PORT}
-

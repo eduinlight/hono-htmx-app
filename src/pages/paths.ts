@@ -1,3 +1,3 @@
 export const pagesPath = {
-  home: "/",
+	home: "/",
 };

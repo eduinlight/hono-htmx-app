@@ -1,7 +1,7 @@
 import { html } from "hono/html";
-import { type FC, type PropsWithChildren } from "hono/jsx";
-import { useRequestContext } from "../../providers";
+import type { FC, PropsWithChildren } from "hono/jsx";
 import { IS_DEV } from "../../../config";
+import { useRequestContext } from "../../providers";
 
 export type PublicLayoutProps = {
   title: string;
@@ -27,17 +27,19 @@ export const PublicLayout: FC<PropsWithChildren<PublicLayoutProps>> = ({
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Exposelocal - ${title}</title>
         <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/htmx.min.js"></script>
+        <script defer src="/js/alpinejs.min.js"></script>
+        <script defer src="/js/socket.io.min.js"></script>
       </head>
       <body>
         <noscript>"You need to enable JavaScript to run this app."</noscript>
         <div id="root">${children}</div>
-        <script src="/js/htmx.min.js"></script>
-        <script src="/js/alpinejs.min.js"></script>
+        <script src="/js/alpine-live-reload-persist.js"></script>
         ${IS_DEV &&
-        html`
-          <script type="module" src="/js/socket.io.min.js"></script>
+    html`
           <script type="module" src="/js/live-reload-client.js"></script>
-        `}
+        `
+    }
       </body>
     </html>`;
 };
