@@ -1,22 +1,20 @@
 {
-	"name": "@el/front",
-	"type": "module",
-	"main": "./src/index.ts",
-	"scripts": {
-		"start-dev": "bun run --bun --watch src/app.ts",
-		"live-reload": "bun run --bun --watch ./dev/live-reload.ts"
-	},
-	"dependencies": {
-		"hono": "^4.7.11",
-		"socket.io": "^4.8.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@tailwindcss/postcss": "^4.1.8",
-		"@types/bun": "latest",
-		"daisyui": "^5.0.43",
-		"postcss": "^8.5.4",
-		"socket.io-client": "^4.8.1",
-		"tailwindcss": "^4.1.8"
-	}
+  "name": "create-hono-htmx-app",
+  "version": "1.0.0",
+  "description": "A Hono + HTMX template for building modern web applications",
+  "type": "module",
+  "bin": {
+    "create-hono-htmx-app": "./bin/create-hono-htmx-app.js"
+  },
+  "files": [
+    "template/**/*",
+    "bin/**/*"
+  ],
+  "keywords": [
+    "hono",
+    "htmx",
+    "template",
+    "bun",
+    "typescript"
+  ]
 }

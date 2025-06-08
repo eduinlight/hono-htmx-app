@@ -1,14 +1,6 @@
-# Hono HTMX App Template
+# Hono HTMX App
 
-A modern web application template built with Hono, HTMX, and Alpine.js featuring server-side rendering and dynamic client-side interactions.
-
-## Template Usage
-
-This repository contains a reusable template for creating Hono-HTMX applications. To use this template:
-
-1. Use the `template/` directory as your project base
-2. Copy the template contents to your new project directory
-3. Follow the installation instructions below
+A modern web application built with Hono, HTMX, and Alpine.js featuring server-side rendering and dynamic client-side interactions.
 
 ## Features
 
@@ -28,11 +20,7 @@ This repository contains a reusable template for creating Hono-HTMX applications
 
 ### Installation & Development
 
-1. Create a new project using the template:
-   ```bash
-   npm create hono-htmx-app my-project
-   cd my-project
-   ```
+1. Clone the repository
 2. Copy the environment template:
    ```bash
    cp .env.dist .env
