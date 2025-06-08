@@ -5,12 +5,12 @@ export const HOME_TITLE = "Home";
 
 export const Home: FC<unknown> = () => {
 	return (
-		<div class="container mx-auto px-4 py-8">
+		<div class="container mx-auto px-4 py-8 flex flex-col gap-4">
 			<div class="text-center">
-				<h1 class="text-4xl font-bold text-gray-800 mb-4">
+				<h1 class="text-4xl font-bold text-gray-800 mb-2">
 					Welcome to Our App
 				</h1>
-				<p class="text-lg text-gray-600 mb-8">
+				<p class="text-lg text-gray-600 mb-4">
 					Get started with our amazing features
 				</p>
 			</div>

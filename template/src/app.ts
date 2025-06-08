@@ -5,7 +5,6 @@ import { io } from "socket.io-client";
 import { IS_DEV, LIVE_RELOAD_PORT, PORT } from "./config";
 import { htmxMiddleware } from "./middlewares";
 import pagesRouter from "./pages";
-import { buildTailwindCSS } from "./tailwind";
 
 const app = new Hono();
 
@@ -25,9 +24,12 @@ Bun.serve({
 if (IS_DEV) {
 	const client = io(`ws://localhost:${LIVE_RELOAD_PORT}`);
 
+	const { buildTailwindCSS } = await import("./tailwind");
+	const cssChanged = await buildTailwindCSS();
+
+	if (cssChanged) {
+		client.emit("style reloaded", "/css/styles.css");
+	}
+
 	client.emit("server reloaded");
-
-	await buildTailwindCSS();
-
-	client.emit("style reloaded", "/css/styles.css");
 }
