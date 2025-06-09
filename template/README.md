@@ -7,6 +7,7 @@ A modern web application built with Hono, HTMX, and Alpine.js featuring server-s
 - **Hono Framework**: Fast, lightweight web framework
 - **HTMX**: Modern approach to building web UIs with minimal JavaScript
 - **Alpine.js**: Lightweight reactive framework for enhanced interactivity
+- **Lit Web Components**: For complex use cases where Alpine.js becomes too limiting
 - **Live Reload**: Development server with automatic browser refresh
 - **State Preservation**: Alpine.js state is preserved during live reload
 - **Tailwind CSS**: Utility-first CSS framework
@@ -43,7 +44,82 @@ src/
 ├── middlewares/          # Custom middleware
 ├── pages/                # Page components and routing
 └── styles.css           # Global styles
+
+client/
+├── index.ts              # Client-side entry point
+├── stores/               # Alpine.js stores
+└── web-components/       # Lit web components
 ```
+
+## Web Components
+
+For complex interactive features that exceed Alpine.js capabilities, this project includes support for Lit web components. These are ideal for:
+
+- Complex state management scenarios
+- Reusable components with advanced logic
+- Cases requiring sophisticated event handling
+- Components that need fine-grained reactivity
+
+### Creating Web Components
+
+Web components are located in `client/web-components/` and follow this pattern:
+
+```typescript
+import { LitElement, html } from "lit";
+import { customElement, state, property } from "lit/decorators.js";
+
+@customElement("my-component")
+export class MyComponent extends LitElement {
+  // Disable shadow DOM to use global Tailwind styles
+  protected createRenderRoot() {
+    return this;
+  }
+
+  @property({ type: String })
+  initialValue = "";
+
+  @state()
+  private internalState = "";
+
+  protected render() {
+    return html`
+      <div class="tailwind-classes-work-here">
+        <!-- Your component template -->
+      </div>
+    `;
+  }
+}
+```
+
+### Example: Todo List Component
+
+The project includes a complete todo list component (`client/web-components/todo-list.web-component.ts`) that demonstrates:
+
+- Property binding with `@property`
+- Internal state management with `@state`
+- Event handling
+- Tailwind CSS integration
+- TypeScript interfaces
+
+Use it in your HTML:
+
+```html
+<todo-list value='[{"text":"Sample task","done":false}]'></todo-list>
+```
+
+### When to Use Web Components vs Alpine.js
+
+**Use Alpine.js for:**
+- Simple state management
+- Basic interactivity (show/hide, form validation)
+- Quick prototyping
+- Server-rendered content enhancement
+
+**Use Lit Web Components for:**
+- Complex data structures and state
+- Advanced user interactions
+- Reusable components across projects
+- Performance-critical interactive elements
 
 ## License
 

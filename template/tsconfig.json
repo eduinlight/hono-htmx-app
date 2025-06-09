@@ -3,6 +3,8 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx",
 		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"useDefineForClassFields": false,
 		// Enable latest features
 		"lib": ["ESNext", "DOM"],
 		"target": "ESNext",
