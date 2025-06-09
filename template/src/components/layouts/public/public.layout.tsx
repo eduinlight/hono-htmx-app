@@ -37,6 +37,7 @@ export const PublicLayout: FC<PropsWithChildren<PublicLayoutProps>> = ({
         ${IS_DEV &&
     html`
           <script type="module" src="/js/bundle.js"></script>
+          <script type="module" src="/js/live-reload-client.js"></script>
         `
     }
       </body>
