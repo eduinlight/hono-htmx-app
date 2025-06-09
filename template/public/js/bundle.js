@@ -51,6 +51,5 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       });
     }
   });
-  console.log("here what??");
 })(Alpine);
 //# sourceMappingURL=bundle.js.map

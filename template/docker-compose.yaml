@@ -16,3 +16,5 @@ services:
     ports:
       - ${PORT}:${PORT}
       - ${LIVE_RELOAD_PORT}:${LIVE_RELOAD_PORT}
+    environment:
+      - CHOKIDAR_USEPOLLING=true
