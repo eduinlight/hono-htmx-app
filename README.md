@@ -24,13 +24,13 @@ This repository contains a reusable template for creating Hono-HTMX applications
 
 ### Prerequisites
 
-- Bun runtime
+- Bun (JavaScript runtime and package manager)
 
 ### Installation & Development
 
 1. Create a new project using the template:
    ```bash
-   npm create hono-htmx-app my-project
+   bunx create-hono-htmx-app my-project
    cd my-project
    ```
 2. Copy the environment template:

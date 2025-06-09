@@ -17,7 +17,7 @@ A modern web application built with Hono, HTMX, and Alpine.js featuring server-s
 
 ### Prerequisites
 
-- Bun runtime
+- Bun (JavaScript runtime and package manager)
 
 ### Installation & Development
 
