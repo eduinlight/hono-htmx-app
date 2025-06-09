@@ -27,6 +27,7 @@ export const PublicLayout: FC<PropsWithChildren<PublicLayoutProps>> = ({
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Exposelocal - ${title}</title>
         <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/material-icons.css" />
         <script defer src="/js/htmx.min.js"></script>
         <script defer src="/js/alpinejs.min.js"></script>
         <script defer src="/js/socket.io.min.js"></script>

@@ -11,6 +11,7 @@ A modern web application built with Hono, HTMX, and Alpine.js featuring server-s
 - **Live Reload**: Development server with automatic browser refresh
 - **State Preservation**: Alpine.js state is preserved during live reload
 - **Tailwind CSS**: Utility-first CSS framework
+- **Material Icons**: Google's Material Design icon library for consistent iconography
 - **TypeScript**: Full type safety throughout the application
 
 ## Getting Started

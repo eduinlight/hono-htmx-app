@@ -58,6 +58,8 @@ This allows the same component to handle both full page renders and HTMX partial
 
 **Tailwind Integration**: Dynamic CSS generation with file watching, integrated with the live reload system.
 
+**Material Icons**: Google's Material Design icons served locally from `public/css/material-icons.css` and `public/fonts/`. Use with classes like `material-icons` or `material-icons-outlined`.
+
 **Component Organization**:
 - `src/components/landings/` - Page-specific components
 - `src/components/layouts/` - Layout shells
