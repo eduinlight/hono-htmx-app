@@ -2,14 +2,6 @@
 
 A modern web application template built with Hono, HTMX, and Alpine.js featuring server-side rendering and dynamic client-side interactions.
 
-## Template Usage
-
-This repository contains a reusable template for creating Hono-HTMX applications. To use this template:
-
-1. Use the `template/` directory as your project base
-2. Copy the template contents to your new project directory
-3. Follow the installation instructions below
-
 ## Features
 
 - **Hono Framework**: Fast, lightweight web framework
