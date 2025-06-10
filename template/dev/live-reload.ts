@@ -1,5 +1,5 @@
+import { watch } from "node:fs";
 import { Server } from "socket.io";
-import { watch } from "fs";
 
 const port = Number.parseInt(process.env.LIVE_RELOAD_PORT as string);
 

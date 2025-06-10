@@ -1,8 +1,8 @@
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import tailwindcss from "@tailwindcss/postcss";
 import postcss from "postcss";
-import { createHash } from "node:crypto";
 
 function hash(content: string): string {
 	return createHash("sha256").update(content).digest("hex");

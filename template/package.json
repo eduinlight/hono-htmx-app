@@ -1,28 +1,28 @@
 {
-  "name": "hono-htmx-app",
-  "type": "module",
-  "main": "./src/index.ts",
-  "scripts": {
-    "bundle-dev": "vite build --watch --mode development",
-    "start-dev": "bun run --bun --watch src/app.ts",
-    "live-reload": "bun run --bun --watch ./dev/live-reload.ts"
-  },
-  "dependencies": {
-    "hono": "^4.7.11",
-    "socket.io": "^4.8.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@tailwindcss/postcss": "^4.1.8",
-    "@types/alpinejs": "^3.13.11",
-    "@types/bun": "latest",
-    "alpine": "^0.2.1",
-    "daisyui": "^5.0.43",
-    "htmx.org": "^1.9.12",
-    "lit": "^3.3.0",
-    "postcss": "^8.5.4",
-    "socket.io-client": "^4.8.1",
-    "tailwindcss": "^4.1.8",
-    "vite": "^6.3.5"
-  }
+	"name": "hono-htmx-app",
+	"type": "module",
+	"main": "./src/index.ts",
+	"scripts": {
+		"bundle-dev": "vite build --watch --mode development",
+		"start-dev": "bun run --bun --watch src/app.ts",
+		"live-reload": "bun run --bun --watch ./dev/live-reload.ts"
+	},
+	"dependencies": {
+		"hono": "^4.7.11",
+		"socket.io": "^4.8.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tailwindcss/postcss": "^4.1.8",
+		"@types/alpinejs": "^3.13.11",
+		"@types/bun": "latest",
+		"alpine": "^0.2.1",
+		"daisyui": "^5.0.43",
+		"htmx.org": "^1.9.12",
+		"lit": "^3.3.0",
+		"postcss": "^8.5.4",
+		"socket.io-client": "^4.8.1",
+		"tailwindcss": "^4.1.8",
+		"vite": "^6.3.5"
+	}
 }

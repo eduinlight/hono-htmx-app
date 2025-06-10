@@ -81,11 +81,13 @@ export const Home: FC<unknown> = () => {
 					Click me: <span x-text="count" />
 				</button>
 			</div>
-			<todo-list value={JSON.stringify([
-				{ text: "Learn Hono", done: false },
-				{ text: "Build web components", done: true },
-				{ text: "Add HTMX integration", done: false }
-			])} />
+			<todo-list
+				value={JSON.stringify([
+					{ text: "Learn Hono", done: false },
+					{ text: "Build web components", done: true },
+					{ text: "Add HTMX integration", done: false },
+				])}
+			/>
 		</div>
 	);
 };

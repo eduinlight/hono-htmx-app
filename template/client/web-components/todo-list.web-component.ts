@@ -1,5 +1,5 @@
 import { LitElement, html } from "lit";
-import { customElement, state, property } from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 
 interface TodoItem {
 	text: string;
@@ -23,7 +23,7 @@ export class TodoList extends LitElement {
 		this.updateTodos();
 	}
 
-	updated(changedProperties: Map<string, any>) {
+	updated(changedProperties: Map<string, unknown>) {
 		if (changedProperties.has("value")) {
 			this.updateTodos();
 		}
