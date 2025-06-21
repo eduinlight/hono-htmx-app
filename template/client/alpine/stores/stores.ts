@@ -1,8 +1,12 @@
 import Alpine from "alpinejs";
-import { ReloadStateStore } from "./alpine-live-reload-persist.store";
+
+// biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
+class ExampleStore {
+	public static NAME = "example";
+}
 
 const stores = {
-	[ReloadStateStore.NAME]: ReloadStateStore,
+	[ExampleStore.NAME]: ExampleStore,
 } as const;
 
 type Stores = typeof stores;
@@ -18,12 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (Alpine) {
 		for (const [key, StoreClass] of Object.entries(stores))
 			Alpine.store(key, new StoreClass());
-	} else {
-		document.addEventListener("alpine:init", () => {
-			for (const key of Object.keys(stores)) {
-				const store = useStore(key);
-				Alpine.store("reloadState", store);
-			}
-		});
 	}
 });

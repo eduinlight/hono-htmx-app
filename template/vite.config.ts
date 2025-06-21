@@ -13,13 +13,7 @@ export default defineConfig({
 				entryFileNames: "[name].js",
 				format: "iife",
 				dir: "./public/js/",
-				globals: {
-					"htmx.org": "htmx",
-					alpinejs: "Alpine",
-					"socket.io-client": "io",
-				},
 			},
-			external: ["htmx.org", "alpinejs", "socket.io-client"],
 		},
 		sourcemap: true,
 		minify: false, // faster rebuilds during dev
